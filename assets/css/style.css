@@ -8,19 +8,22 @@
     object-fit: cover;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 header {
     background: #252B42;
     color: #fff;
+    padding: 20px 0;
 }
 
 nav {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 10%;
     background: transparent;
-    transition: all .50s ease;
 }
 
 .navlist {
@@ -56,15 +59,17 @@ nav {
 }
 
 .hero {
-    height: 60vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 80px 0;
 }
 
-
+.main-text * {
+    margin-bottom: 30px;
+}
 
 .main-text h5 {
     font-weight: 700;
@@ -75,7 +80,6 @@ nav {
 .main-text h1 {
     font-weight: 700;
     font-size: 58px;
-
 }
 
 .main-text h4 {
@@ -84,23 +88,32 @@ nav {
 }
 
 .main-text .learnmore .btn2 {
-    border: 1px solid  #23A6F0;
+    border: 1px solid #23A6F0;
     padding: 10px 20px;
     color: #23A6F0;
 }
 
+.btn1 {
+    border: 1px solid #23A6F0;
+    padding: 10px 20px;
+}
 
+/* cards */
 
 .container-card .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
-    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .container-card .box-container .box {
     background: #fff;
-    /* text-align: center; */
-    padding: 30px 20px;
+    padding: 40px;
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 
@@ -110,63 +123,57 @@ nav {
     font-size: 15px;
     padding: 10px 0;
     font-weight: 700;
-    
 }
 
-.container-card .box-container .box p{
+.container-card .box-container .box p {
     color: black;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    text-align: start;
 }
 
-.container-card .box-container .box .btn {
-display: inline-block;
-background: #FFDCD1;
-border-radius: 10px;
-padding: 22px 19px 22px 19px;
+.container-card .box-container .box .card-icons {
+    display: inline-block;
+    background: #FFDCD1;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.container-card .box-container .box hr {
+/* .container-card .box-container .box hr {
     width: 50px;
     height: 3px;
     background: #E74040;
+} */
+.container-card .box-container .box h3 {
+    position: relative;
 }
 
+.container-card .box-container .box h3::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #E74040;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
 
 
 
 .container-card .box-container .box2 {
     background: #23A6F0;
-    padding: 30px 20px;
-
 }
 
 .container-card .box-container .box2 h3 {
     color: #fff;
-    font-size: 15px;
-    padding: 10px 0;
-    font-weight: 700;
-    
 }
 
-.container-card .box-container .box2 p{
+.container-card .box-container .box2 p {
     color: #fff;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
 }
 
-.container-card .box-container .box2 .btn {
-    display: inline-block;
-    background: #fff;
-    border-radius: 10px;
-    padding: 22px 19px 22px 19px;
-}
-
-.container-card .box-container .box2 hr {
-    width: 50px;
-    height: 3px;
+.container-card .box-container .box2 h3::after {
     background: #fff;
 }
 
@@ -177,6 +184,7 @@ padding: 22px 19px 22px 19px;
 .layout2 .container {
     padding: 100px 0px 100px 0px;
 }
+
 .layout2 .row {
     display: flex;
     align-items: center;
@@ -217,13 +225,14 @@ padding: 22px 19px 22px 19px;
 }
 
 .layout2 .main-picture {
-    position: absolute;
     width: 300px;
     height: 300px;
 }
-
-.layout2 .next-picture {
+.picture-holder-absolute{
     position: relative;
+}
+.layout2 .next-picture {
+    position: absolute;
     top: 250px;
     width: 250px;
     height: 100px;
@@ -231,7 +240,7 @@ padding: 22px 19px 22px 19px;
 }
 
 .layout2 .second-picture {
-    position: relative;
+    position: absolute;
     width: 150px;
     height: 150px;
     right: 30px;
@@ -249,25 +258,25 @@ padding: 22px 19px 22px 19px;
 }
 
 .product .container .row-fisrt h6,
-.product .pricesproduct .frame1 p{
- font-weight: 700;
- font-size: 14px;
- line-height: 24px;
- color: #23A6F0;
+.product .pricesproduct .frame1 p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #23A6F0;
 }
 
 .product .container .row-fisrt h2 {
-font-weight: 700;
- font-size: 40px;
- line-height: 50px;
- color:#252B42
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #252B42
 }
 
 .product .container .row-fisrt p {
-font-weight: 400;
- font-size: 14px;
- line-height: 20px;
- color:#737373
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373
 }
 
 .product .container .row-second {
@@ -338,7 +347,7 @@ font-weight: 400;
 .product .pricesproduct .frame2 .prices {
     display: flex;
     gap: 5px;
-} 
+}
 
 
 .product .pricesproduct .frame2 .prices .expensive {
@@ -367,32 +376,31 @@ font-weight: 400;
 }
 
 
-.product .pricesproduct .frame2 .btn-sm{
+.product .pricesproduct .frame2 .btn-sm {
     border-radius: 37px;
     border: 1px solid #23A6F0;
     padding: 5px 20px;
-    
 
 
-} 
+
+}
 
 
 
 
 .layout3 .main-content h6,
-.joinus h6{
+.joinus h6 {
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     color: #23A6F0;
 }
 
-.layout3 .main-content h2
-.joinus h2 {
+.layout3 .main-content h2 .joinus h2 {
     font-weight: 700;
     font-size: 40px;
     line-height: 50px;
-    color:#252B42
+    color: #252B42
 }
 
 .layout3 .main-content p,
@@ -402,7 +410,7 @@ font-weight: 400;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color:#737373
+    color: #737373
 }
 
 .layout3 .container .second {
@@ -423,8 +431,9 @@ font-weight: 400;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color:#737373
+    color: #737373
 }
+
 .layout3 .container .second .fa-solid,
 .layout3 .container .second .fa-regular {
     color: gold;
